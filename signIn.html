@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hyperion Seeds </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" 
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="styles2.css">
+    <!---we had linked our css file----->
+</head>
+<body>
+    <div class="full-page">
+        <div class="navbar">
+            <div>
+                <a href='index.html'>Hyperion Seeds</a>
+            </div>
+            <nav>
+                <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+                    <a class="navbar-brand" href="index.html">Hyperion Seeds</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Discover</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                          </li>
+                      </ul>
+                        <button class='loginbtn btn btn-outline-success my-2 my-sm-0 btn-lg' onclick="document.getElementById('login-form').style.display='block'" style="width:auto;">Login</button></li>
+                        
+                    </div>
+                </nav>
+            </nav>
+        </div>
+<div class="mid">
+    <video autoplay muted loop>       
+        <source class="embed-responsive" src="img/leaves.mp4" type="video/mp4"> 
+    </video>               
+        <div id='login-form'class='login-page'>
+            <div class="form-box">
+                <div class='button-box'>
+                    <div id='btn'></div>
+                    <button type='button'onclick='login()'class='toggle-button'>Log In</button>
+                    <button type='button'onclick='register()'class='toggle-button'>Register</button>
+                </div>
+                <form id='login' class='input-group-login'>
+                    <input type='text'class='input-field'placeholder='Email Id' required >
+                    <input type='password'class='input-field'placeholder='Enter Password' required>
+                    <input type='checkbox'class='check-box'><span class="remember">Remember Password</span>
+                    <button type='submit'class='submit-btn'>Log in</button>
+		        </form>
+		        <form id='register' class='input-group-register'>
+                        <input type='text'class='input-field 'placeholder='First Name ' required>
+                        <input type='text'class='input-field'placeholder='Last Name ' required>
+                        <input type='email'class='input-field'placeholder='Email Id' required>
+                        <input type='password'class='input-field'placeholder='Enter Password' required>
+                        <input type='password'class='input-field'placeholder='Confirm Password'  required>
+                        <input type='checkbox'class='check-box '><span class=" agreement">I agree to the terms and conditions</span>
+                        <button type='submit'class='submit-btn'>Register</button>
+	            </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        var x=document.getElementById('login');
+		var y=document.getElementById('register');
+		var z=document.getElementById('btn');
+		function register()
+		{
+			x.style.left='-400px';
+			y.style.left='50px';
+			z.style.left='110px';
+		}
+		function login()
+		{
+			x.style.left='50px';
+			y.style.left='450px';
+			z.style.left='0px';
+		}
+	</script>
+	<script>
+        var modal = document.getElementById('login-form');
+        window.onclick = function(event) 
+        {
+            if (event.target == modal) 
+            {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+</body>
+</html>
